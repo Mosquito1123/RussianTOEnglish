@@ -1,0 +1,74 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Description of what the lane does"
+  lane :development do |options|
+    ENV['FASTLANE_USER']= options[:username] || "ebbs08@163.com"
+    ENV['FASTLANE_PASSWORD']= options[:password] || "Poly2893"
+    clear_derived_data
+    system 'rm -rf ./fastlane/myFile.mobileprovision'
+    project_name = options[:project_name] || "RussianTOEnglish"
+
+    get_certificates(
+      development: true,
+      # username: "ebbs08@163.com",
+      output_path:'./fastlane/',
+      filename:"dist"
+    )
+    keychain_password = options[:keychain_password] || "1234"
+    keychain_name = options[:keychain_name] || "login"
+    certificate_password = options[:certificate_password] || "123456"
+    import_certificate(
+  certificate_path: "./fastlane/dist.cer",
+  certificate_password: certificate_password,
+  keychain_password:keychain_password,
+  keychain_name:keychain_name
+)
+    #sigh(force:true)
+get_provisioning_profile(
+  development: true,
+  force: true,
+  filename: "myFile.mobileprovision",
+  # username: "ebbs08@163.com",
+  output_path:"./fastlane/",
+  app_identifier:options[:app_identifier] || "com.goodtransfer.RussianTOEnglish"
+)
+# match
+
+ desc "development"
+
+ update_project_provisioning(
+        xcodeproj: "#{project_name}.xcodeproj",
+        # profile: "./fastlane/myFile.mobileprovision",
+        target_filter: "#{project_name}",
+        build_configuration: "Release",
+      )
+
+      disable_automatic_code_signing
+  gym(
+    scheme: "#{project_name}",   #工程下要打包的项目,如果一个工程有多个项目则用[项目1,项目2]
+    export_method: "development", #打包的方式, development/adhoc/enterprise/appstore
+    export_options: {
+                signingStyle: "manual"
+        },
+    codesigning_identity:"iPhone Developer: Gisone Linkar",
+    output_directory: './build',  #指定ipa最后输出的目录
+    )
+    # add actions here: https://docs.fastlane.tools/actions
+  end
+end

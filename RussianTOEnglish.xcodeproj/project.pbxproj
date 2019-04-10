@@ -208,13 +208,16 @@
 				TargetAttributes = {
 					F3748BD6221E8544003A4B6C = {
 						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Manual;
 					};
 					F3748BEA221E8544003A4B6C = {
 						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Manual;
 						TestTargetID = F3748BD6221E8544003A4B6C;
 					};
 					F3748BF5221E8544003A4B6C = {
 						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Manual;
 						TestTargetID = F3748BD6221E8544003A4B6C;
 					};
 				};
@@ -452,16 +455,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4PGZU33K39;
+				CODE_SIGN_IDENTITY = "iPhone Development";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 739LB63M53;
 				INFOPLIST_FILE = RussianTOEnglish/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = winston.RussianTOEnglish;
+				PRODUCT_BUNDLE_IDENTIFIER = com.goodtransfer.RussianTOEnglish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "27e18799-c838-453b-b06c-441a7b2646b6";
+				PROVISIONING_PROFILE_SPECIFIER = "com.goodtransfer.RussianTOEnglish Development";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -471,16 +477,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4PGZU33K39;
+				CODE_SIGN_IDENTITY = "iPhone Development";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 739LB63M53;
 				INFOPLIST_FILE = RussianTOEnglish/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = winston.RussianTOEnglish;
+				PRODUCT_BUNDLE_IDENTIFIER = com.goodtransfer.RussianTOEnglish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ed056654-2c66-4d2a-8fe1-9c1ee3faf422";
+				PROVISIONING_PROFILE_SPECIFIER = "com.goodtransfer.RussianTOEnglish Development";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -491,7 +500,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 4PGZU33K39;
 				INFOPLIST_FILE = RussianTOEnglishTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -501,6 +510,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = winston.RussianTOEnglishTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "27e18799-c838-453b-b06c-441a7b2646b6";
+				PROVISIONING_PROFILE_SPECIFIER = "com.goodtransfer.RussianTOEnglish Development";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RussianTOEnglish.app/RussianTOEnglish";
@@ -512,7 +523,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 4PGZU33K39;
 				INFOPLIST_FILE = RussianTOEnglishTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -522,6 +533,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = winston.RussianTOEnglishTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ed056654-2c66-4d2a-8fe1-9c1ee3faf422";
+				PROVISIONING_PROFILE_SPECIFIER = "com.goodtransfer.RussianTOEnglish Development";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RussianTOEnglish.app/RussianTOEnglish";
@@ -532,7 +545,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 4PGZU33K39;
 				INFOPLIST_FILE = RussianTOEnglishUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -542,6 +555,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = winston.RussianTOEnglishUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "27e18799-c838-453b-b06c-441a7b2646b6";
+				PROVISIONING_PROFILE_SPECIFIER = "com.goodtransfer.RussianTOEnglish Development";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = RussianTOEnglish;
@@ -552,7 +567,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 4PGZU33K39;
 				INFOPLIST_FILE = RussianTOEnglishUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -562,6 +577,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = winston.RussianTOEnglishUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ed056654-2c66-4d2a-8fe1-9c1ee3faf422";
+				PROVISIONING_PROFILE_SPECIFIER = "com.goodtransfer.RussianTOEnglish Development";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = RussianTOEnglish;
